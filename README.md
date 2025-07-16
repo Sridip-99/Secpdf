@@ -7,18 +7,18 @@ A Django-based responsive web application that allows users to **securely encryp
 ## 📸 Demo Screenshots
 
 > *HOME PAGE IN LIGHT & DARK MODE*
-![HOME PAGE IN LIGHT MODE](https://raw.githubusercontent.com/Sridip-99/Cybersecurity/refs/heads/main/SecurePDF/Snapshot/home_light.png "This is a sample image.")
-![HOME PAGE IN DARK MODE](https://raw.githubusercontent.com/Sridip-99/Cybersecurity/refs/heads/main/SecurePDF/Snapshot/home_dark.png "This is a sample image.")
+![HOME PAGE IN LIGHT MODE](https://raw.githubusercontent.com/Sridip-99/Secpdf/refs/heads/main/Snapshot/home_light.png "This is a sample image.")
+![HOME PAGE IN DARK MODE](https://raw.githubusercontent.com/Sridip-99/Secpdf/refs/heads/main/Snapshot/home_dark.png "This is a sample image.")
 
 > *ENCRYPT PAGE IN DARK MODE*
-![ENCRYPT PAGE IN DARK MODE](https://raw.githubusercontent.com/Sridip-99/Cybersecurity/refs/heads/main/SecurePDF/Snapshot/encrypt_dark.png "This is a sample image.")
+![ENCRYPT PAGE IN DARK MODE](https://raw.githubusercontent.com/Sridip-99/Secpdf/refs/heads/main/Snapshot/encrypt_dark.png "This is a sample image.")
 
 > *DECRYPT PAGE IN LIGHT MODE*
-![DECRYPT PAGE IN LIGHT MODE](https://raw.githubusercontent.com/Sridip-99/Cybersecurity/refs/heads/main/SecurePDF/Snapshot/decrypt_light.png "This is a sample image.")
+![DECRYPT PAGE IN LIGHT MODE](https://raw.githubusercontent.com/Sridip-99/Secpdf/refs/heads/main/Snapshot/decrypt_light.png "This is a sample image.")
 
 > *RESPONSE PAGE IN LIGHT & DARK MODE*
-![RESPONSE PAGE IN LIGHT MODE](https://raw.githubusercontent.com/Sridip-99/Cybersecurity/refs/heads/main/SecurePDF/Snapshot/response_light.png "This is a sample image.")
-![RESPONSE PAGE IN DARK MODE](https://raw.githubusercontent.com/Sridip-99/Cybersecurity/refs/heads/main/SecurePDF/Snapshot/response_dark.png "This is a sample image.")
+![RESPONSE PAGE IN LIGHT MODE](https://raw.githubusercontent.com/Sridip-99/Secpdf/refs/heads/main/Snapshot/response_light.png "This is a sample image.")
+![RESPONSE PAGE IN DARK MODE](https://raw.githubusercontent.com/Sridip-99/Secpdf/refs/heads/main/Snapshot/response_dark.png "This is a sample image.")
 
 ---
 
