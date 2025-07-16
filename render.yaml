@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: Secpdf
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn Secpdf.wsgi:application
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: Secpdf.settings
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: False
