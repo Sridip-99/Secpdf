@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+	{% block content %}
+	<main>
+        <div class="container">
+
+            {% if messages %}
+                <div class="messages">
+                    {% for message in messages %}
+                        <p style="color: {% if message.tags == 'error' %}red{% elif message.tags == 'success' %}green{% else %}black{% endif %};">
+                            {% if message.tags == 'error' %}
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            {% elif message.tags == 'success' %}
+                                <i class="fsa-solid fa-check-circle"></i>
+                            {% endif %}
+                            {{ message }}
+                        </p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <h1>Decrypt PDF</h1>
+            <p>Welcome to the Secure PDF application. Please upload a PDF to Decrypt:</p>
+            <form action="{% url 'decrypt_file' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="file-drop-area">
+                    <span class="fake-btn">Choose PDF file <i class="fa-solid fa-file"></i></span>
+                    <span class="file-msg">or drop files here</span>
+                    <input class="file-input" type="file" name="pdf" id="file" accept=".pdf" required>
+                    <div class="item-delete"></div>
+                </div>
+                <br>
+                <label for="password">Enter Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+                <button type="button" class="toggle-password" id="toggle-password"><i class="fa-solid fa-eye"></i></button>
+                <button type="submit" id="submit-btn">Decrypt PDF <i class="fa-solid fa-lock-open"></i></button>
+            </form>
+            <div class="note">
+                <p>
+                    <span>Note:</span> 
+                        The file will be decrypted with your password.
+                    <br>
+                        The password must match the one used during encryption.
+                    <br>
+                        If the password is incorrect, the decryption will fail.
+                    <br>
+                        If the PDF is not encrypted, it will be downloaded as is.
+                    <br>
+                        If the PDF is encrypted, it will be decrypted and downloaded to your system.
+                    <br>
+                        The decryption process may take some time depending on the size of the PDF.
+                </p>
+            </div>
+            
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a href="/"><i class="fa-solid fa-house-chimney"></i></a>
+                    </li>
+                    <li>
+                        <a href="{% url 'encrypt' %}"><i class="fa-solid fa-lock"></i></a>
+                    </li>
+                    <li>
+                        <a href="{% url 'decrypt' %}"><i class="fa-solid fa-unlock"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+	{% endblock %}

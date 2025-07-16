@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+	{% block content %}
+	<main>
+        <div class="container">
+            
+            {% if messages %}
+                <div class="messages">
+                    {% for message in messages %}
+                        <p style="color: {% if message.tags == 'error' %}red{% elif message.tags == 'success' %}green{% else %}black{% endif %};">
+                            {% if message.tags == 'error' %}
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            {% elif message.tags == 'success' %}
+                                <i class="fsa-solid fa-check-circle"></i>
+                            {% endif %}
+                            {{ message }}
+                        </p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <h1>Secure PDF</h1>
+
+            {% if file_url %}
+                <a href="{{ file_url }}" download style="font-size: 1em;">
+                    <button id="submit-btn" type="submit">Download Your File <i class="fa-solid fa-file"></i></button>
+                </a>
+            {% else %}
+                <p>No file available to download.</p>
+            {% endif %}
+
+            <div class="greetings">
+                <p>Thank you for your support! <span>&hearts;</span>
+                <br>Stay secure and keep your PDFs safe!
+                <br>We hope you found it useful. If you have any feedback or suggestions, please let us know.
+                <br>Have a great day!</p>
+            </div>
+
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a href="/"><i class="fa-solid fa-house-chimney"></i></a>
+                    </li>
+                    <li>
+                        <a href="{% url 'encrypt' %}"><i class="fa-solid fa-lock"></i></a>
+                    </li>
+                    <li>
+                        <a href="{% url 'decrypt' %}"><i class="fa-solid fa-unlock"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="additional-info">
+                <p>For more information, visit my <a href="https://sridiptah99.netlify.app">Portfolio</a> | <a href="https://www.linkedin.com/in/sridip-tah99">Linkedin</a></p>
+                <p>or check out my <a href="https://www.github.com/sridiptah99">GitHub</a> for more projects.</p>
+                <p>Best regards,</p>
+                <p>Sridip Tah, Web Developer</p>
+                <p>Contact: <a href="mailto:sridip2003@gmail.com">sridip2003@gmail.com</a></p>
+            </div>
+        </div>
+    </main>
+	{% endblock %}

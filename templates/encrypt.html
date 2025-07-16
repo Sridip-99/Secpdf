@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+	{% block content %}
+	<main>
+        <div class="container">
+
+            {% if messages %}
+                <div class="messages">
+                    {% for message in messages %}
+                        <p style="color: {% if message.tags == 'error' %}red{% elif message.tags == 'success' %}green{% else %}black{% endif %};">
+                            {% if message.tags == 'error' %}
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            {% elif message.tags == 'success' %}
+                                <i class="fsa-solid fa-check-circle"></i>
+                            {% endif %}
+                            {{ message }}
+                        </p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            
+            <h1>Encrypt PDF</h1>
+            <p>Welcome to the Secure PDF application. Please upload a PDF to Encrypt:</p>
+            <form id="pdf-form" action="{% url 'encrypt_file' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="file-drop-area">
+                    <span class="fake-btn">Choose PDF file <i class="fa-solid fa-file"></i></span>
+                    <span class="file-msg">or drop files here</span>
+                    <input class="file-input" type="file" name="pdf" id="file" accept=".pdf" required>
+                    <div class="item-delete"></div>
+                </div>
+                <br>
+                <label for="password">Enter Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+                <button type="button" class="toggle-password" id="toggle-password"><i class="fa-solid fa-eye"></i></button>
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password" required>
+                <button type="button" class="toggle-password" id="toggle-confirm-password"><i class="fa-solid fa-eye"></i></button>
+                <div class="password-check">
+                    <span class="message" id="message"> </span>
+                </div>
+				<br>
+                <button type="submit" id="submit-btn">Encrypt PDF <i class="fa-solid fa-lock"></i></button>
+            </form>
+            <div class="note">
+                <p>
+                    <span>Note:</span> 
+                        The file will be encrypted with a password of your choice.
+                    <br>
+                        The password must be at least 8 characters long.
+                    <br>
+                        The encrypted PDF will be download to your system automatically after encryption.
+                    <br>
+                        Ensure you remember the password, as it will be required to decrypt the PDF.
+                    <br>
+                        The encryption process may take some time depending on the size of the PDF.
+                </p>
+            </div>
+
+            
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a href="/"><i class="fa-solid fa-house-chimney"></i></a>
+                    </li>
+                    <li>
+                        <a href="{% url 'encrypt' %}"><i class="fa-solid fa-lock"></i></a>
+                    </li>
+                    <li>
+                        <a href="{% url 'decrypt' %}"><i class="fa-solid fa-unlock"></i></a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </main>
+	{% endblock %}
