@@ -3,3 +3,5 @@ form==0.0.1
 PyPDF2==3.0.1
 requests==2.25.1
 urllib3==1.26.5
+gunicorn==23.0.0
+whitenoise==6.9.0
