@@ -1,7 +1,7 @@
 # 🔒 Secure PDF Encrypt & Decrypt Web App
 
-A Django-based responsive web application that allows users to **securely encrypt** and **decrypt PDF files** using a password. Files are uploaded, processed, and returned with a clean interface and security-focused logic.
-
+A Django-based responsive web application hosted on Render that allows users to **securely encrypt** and **decrypt PDF files** using a password. Files are uploaded, processed, and returned with a clean interface and security-focused logic.
+Live: https://securepdf-np2x.onrender.com
 ---
 
 ## 📸 Demo Screenshots
