@@ -231,14 +231,14 @@ main {
 }
 /* === heading styling ===*/
 .container h1 {
-    font-size: 4em;
+    font-size: 3em;
     font-family: "Commissioner","Courier New", Courier, monospace;
     margin-bottom: 20px;
     color: var(--color1);
 }
 /* === paragraph styling ===*/
 .container p {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin-bottom: 40px;
     text-align: center;
     color: var(--color2);
