@@ -269,11 +269,11 @@ main {
     background-color: transparent;
     backdrop-filter: blur(5px);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
+
     
     margin: 10px 0;
     border: solid 1px var(--color1);
-    border-radius: 10px;
+    border-radius: 20px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .container li:hover {
@@ -300,7 +300,6 @@ main {
     .container a{
         min-height: 60px;
     }
-    
 }
 .container a:hover {
     color: var(--color1);
@@ -357,7 +356,6 @@ main {
 	align-items: center;
 	justify-content: center;
 	flex-grow: 1;
-  overflow: hidden;
 	background-color: transparent;
 	backdrop-filter: blur(5px);
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
@@ -436,14 +434,21 @@ main {
 /* === form styling ===*/
 form{
 	width: 100%;
+  	min-width: 350px;
 	height: fit-content;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+  gap: 20px;
+}
+.input-field{
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 form label {
-  display: none;
+  	display: none;
 	font-size: 1.2em;
 	color: var(--color1);
 	font-weight: 700;
@@ -452,16 +457,17 @@ form label {
 form input{
 	width: 40%;
 	min-width: 300px;
-  max-width: 500px;
+  	max-width: 500px;
+	position: relative;
 	padding: 10px;
 	border: 1px solid var(--color1);
-	border-radius: 5px;
+	border-radius: 30px;
 	background-color: var(--background-color2);
 	backdrop-filter: blur(5px);
 	color: var(--color3);
 	font-family: 'Courier New', Courier, monospace;
 	font-size: 16px;
-  font-weight: 300;
+  	font-weight: 300;
 	transition: border-color 0.3s ease;
 }
 form input::placeholder {
@@ -480,15 +486,13 @@ form input:focus {
   color: var(--color3);
 }
 .toggle-password{
-  width: 24px;
-  height: 24px;
+  width: 0;
   display: inline-block;
   position: relative;
-  margin-left: 10px;
   border: none;
   color: var(--color1);
   background: transparent;
-  transform: translateX(10em) translateY(-2.42em);
+  transform: translateX(-3.5em);
   z-index: 2;
   cursor: pointer;
 }
@@ -500,7 +504,7 @@ form input:focus {
 	font-weight: 700;
 	border: 1px solid var(--color1);
 	padding: 10px 20px;
-	border-radius: 5px;
+	border-radius: 30px;
 	font-size: 1.2em;
 	transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
@@ -522,7 +526,7 @@ form input:focus {
   background-color: var(--background-color2);
   backdrop-filter: blur(5px);
   border: 1px solid var(--color1);
-  border-radius: 5px;
+  border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0,0,0,.1);
   transition: .3s;
 }
@@ -534,7 +538,7 @@ form input:focus {
 .fake-btn {
   flex-shrink: 0;
   background-color: #96b39c;
-  border-radius: 3px;
+  border-radius: 8px;
   padding: 8px 15px;
   margin-right: 10px;
   font-size: 12px;
