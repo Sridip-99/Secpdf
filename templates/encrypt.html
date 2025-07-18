@@ -28,17 +28,20 @@
                     <input class="file-input" type="file" name="pdf" id="file" accept=".pdf" required>
                     <div class="item-delete"></div>
                 </div>
-                <br>
-                <label for="password">Enter Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter password" required>
-                <button type="button" class="toggle-password" id="toggle-password"><i class="fa-solid fa-eye"></i></button>
-                <label for="confirmPassword">Confirm Password:</label>
-                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password" required>
-                <button type="button" class="toggle-password" id="toggle-confirm-password"><i class="fa-solid fa-eye"></i></button>
+                <div class="input-field">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password" required>
+                    <button type="button" class="toggle-password" id="toggle-password"><i class="fa-solid fa-eye"></i></button>
+                </div>
+                <div class="input-field">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password" required>
+                    <button type="button" class="toggle-password" id="toggle-confirm-password"><i class="fa-solid fa-eye"></i></button>
+                </div>
                 <div class="password-check">
                     <span class="message" id="message"> </span>
                 </div>
-				<br>
+		<br>
                 <button type="submit" id="submit-btn">Encrypt PDF <i class="fa-solid fa-lock"></i></button>
             </form>
             <div class="note">
@@ -66,7 +69,7 @@
                         <a href="{% url 'encrypt' %}"><i class="fa-solid fa-lock"></i></a>
                     </li>
                     <li>
-                        <a href="{% url 'decrypt' %}"><i class="fa-solid fa-unlock"></i></a>
+                        <a href="{% url 'decrypt' %}"><i class="fa-solid fa-lock-open"></i></a>
                     </li>
                 </ul>
             </div>
