@@ -13,9 +13,9 @@
 	--color4: #fff;
     --background-color: rgba(255, 255, 255, 0.925);
     --background-color2: rgba(255, 255, 255, 0.534);
-    --c1: #c0c0c0;
-    --c2: #f0f0f0;
-    --c3: #dcdcdc;
+    --c1: #e1e1e1;
+    --c2: #f7f7f7;
+    --c3: #eeeeee;
 }
 /* === dark mode variables ===*/
 .dark-mode {
@@ -25,9 +25,9 @@
 	--color4: #000;
     --background-color: rgba(0, 0, 0, 0.8);
     --background-color2: rgba(0, 0, 0, 0.5);
-    --c1: #1d1d1d;
-    --c2: #4e4f51;
-    --c3: #3c3c3c;
+    --c1: #0e0e0e;
+    --c2: #262728;
+    --c3: #1d1d1d;
 }
 
 
@@ -227,7 +227,17 @@ main {
 
     text-align: center;
     padding: 20px;
-    background: var(--background-color2);
+    animation: float-in 0.45s ease-in;
+}
+@keyframes float-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 /* === heading styling ===*/
 .container h1 {
