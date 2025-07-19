@@ -54,12 +54,15 @@ Secpdf/
 │   ├── urls.py
 │   ├── settings.py
 │   ├── forms.py
-│   ├── utils.py
+│   └── utils.py
 ├── templates/
+│   └──error/
+│     ├── 404.html
+│     └── 500.html
 │   ├── Index.html
 │   ├── encrypt.html
 │   ├── decrypt.html
-│   ├── response.html
+│   └── response.html
 ├── static/
 │   └── (your CSS/JS files)
 ├── media/
