@@ -54,7 +54,7 @@ Secpdf/
 │   ├── urls.py
 │   ├── settings.py
 │   ├── forms.py
-│   └── utils.py
+│   └── utils.py (Core logic here)
 ├── templates/
 │   └──error/
 │     ├── 404.html
@@ -64,7 +64,7 @@ Secpdf/
 │   ├── decrypt.html
 │   └── response.html
 ├── static/
-│   └── (your CSS/JS files)
+│   └── (CSS/JS/logo files)
 ├── media/
 │   └── (output PDFs saved here)
 └── manage.py
