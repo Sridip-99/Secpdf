@@ -2,6 +2,7 @@
 
 A Django-based responsive web application hosted on Render that allows users to **securely encrypt** and **decrypt PDF files** using a password. Files are uploaded, processed, and returned with a clean interface and security-focused logic.
 Live: https://securepdf-np2x.onrender.com
+Project Report: https://shorturl.at/VG48L
 ---
 
 ## 📸 Demo Screenshots
